@@ -43,49 +43,63 @@ const Index = () => {
       default:
         return (
           <div className="animate-fade-in space-y-8">
-            <Hero onNavigate={setActiveSection} />
-            
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="p-6 hover:shadow-medium transition-all cursor-pointer group" onClick={() => setActiveSection("weather")}>
-                  <div className="text-center space-y-4">
-                    <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <Cloud className="h-8 w-8 text-primary" />
+                <div 
+                  className="relative rounded-2xl overflow-hidden cursor-pointer group shadow-medium hover:shadow-lg transition-all"
+                  onClick={() => setActiveSection("weather")}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary-glow" />
+                  <div className="relative p-8 text-white">
+                    <div className="w-16 h-16 mb-4 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                      <Cloud className="h-8 w-8" />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground">Weather Forecast</h3>
-                    <p className="text-muted-foreground">Check regional weather conditions</p>
+                    <h3 className="text-2xl font-bold mb-2">Weather Forecast</h3>
+                    <p className="text-white/90">Check regional weather conditions and plan your activities</p>
                   </div>
-                </Card>
+                </div>
                 
-                <Card className="p-6 hover:shadow-medium transition-all cursor-pointer group" onClick={() => setActiveSection("marketplace")}>
-                  <div className="text-center space-y-4">
-                    <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <ShoppingBag className="h-8 w-8 text-primary" />
+                <div 
+                  className="relative rounded-2xl overflow-hidden cursor-pointer group shadow-medium hover:shadow-lg transition-all"
+                  onClick={() => setActiveSection("marketplace")}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent to-blue-400" />
+                  <div className="relative p-8 text-white">
+                    <div className="w-16 h-16 mb-4 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                      <ShoppingBag className="h-8 w-8" />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground">Marketplace</h3>
-                    <p className="text-muted-foreground">Buy and sell agricultural products</p>
+                    <h3 className="text-2xl font-bold mb-2">Marketplace</h3>
+                    <p className="text-white/90">Buy and sell agricultural products directly with farmers</p>
                   </div>
-                </Card>
+                </div>
                 
-                <Card className="p-6 hover:shadow-medium transition-all cursor-pointer group" onClick={() => setActiveSection("services")}>
-                  <div className="text-center space-y-4">
-                    <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <Wrench className="h-8 w-8 text-primary" />
+                <div 
+                  className="relative rounded-2xl overflow-hidden cursor-pointer group shadow-medium hover:shadow-lg transition-all"
+                  onClick={() => setActiveSection("services")}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-secondary to-orange-400" />
+                  <div className="relative p-8 text-white">
+                    <div className="w-16 h-16 mb-4 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                      <Wrench className="h-8 w-8" />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground">Services</h3>
-                    <p className="text-muted-foreground">Agricultural services and support</p>
+                    <h3 className="text-2xl font-bold mb-2">Services</h3>
+                    <p className="text-white/90">Agricultural services, equipment rental, and expert support</p>
                   </div>
-                </Card>
+                </div>
                 
-                <Card className="p-6 hover:shadow-medium transition-all cursor-pointer group" onClick={() => setActiveSection("contact")}>
-                  <div className="text-center space-y-4">
-                    <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <MessageSquare className="h-8 w-8 text-primary" />
+                <div 
+                  className="relative rounded-2xl overflow-hidden cursor-pointer group shadow-medium hover:shadow-lg transition-all"
+                  onClick={() => setActiveSection("contact")}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-glow to-accent" />
+                  <div className="relative p-8 text-white">
+                    <div className="w-16 h-16 mb-4 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                      <MessageSquare className="h-8 w-8" />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground">Connect With Us</h3>
-                    <p className="text-muted-foreground">Get in touch for support</p>
+                    <h3 className="text-2xl font-bold mb-2">Connect With Us</h3>
+                    <p className="text-white/90">Get in touch for support and assistance</p>
                   </div>
-                </Card>
+                </div>
               </div>
               
               <div className="space-y-6">
