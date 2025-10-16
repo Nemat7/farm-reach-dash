@@ -9,6 +9,10 @@ import { Contact } from "@/components/Contact";
 import { Advertisement } from "@/components/Advertisement";
 import { Card } from "@/components/ui/card";
 import { Cloud, ShoppingBag, Wrench, MessageSquare } from "lucide-react";
+import cardWeather from "@/assets/card-weather.jpg";
+import cardMarketplace from "@/assets/card-marketplace.jpg";
+import cardServices from "@/assets/card-services.jpg";
+import cardContact from "@/assets/card-contact.jpg";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -46,11 +50,16 @@ const Index = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div 
-                  className="relative rounded-2xl overflow-hidden cursor-pointer group shadow-medium hover:shadow-lg transition-all"
+                  className="relative rounded-2xl overflow-hidden cursor-pointer group shadow-medium hover:shadow-lg transition-all h-64"
                   onClick={() => setActiveSection("weather")}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary-glow" />
-                  <div className="relative p-8 text-white">
+                  <img 
+                    src={cardWeather} 
+                    alt="Weather forecast"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-primary-glow/80 group-hover:from-primary/95 group-hover:to-primary-glow/85 transition-all" />
+                  <div className="relative p-8 h-full flex flex-col justify-end text-white">
                     <div className="w-16 h-16 mb-4 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
                       <Cloud className="h-8 w-8" />
                     </div>
@@ -60,11 +69,16 @@ const Index = () => {
                 </div>
                 
                 <div 
-                  className="relative rounded-2xl overflow-hidden cursor-pointer group shadow-medium hover:shadow-lg transition-all"
+                  className="relative rounded-2xl overflow-hidden cursor-pointer group shadow-medium hover:shadow-lg transition-all h-64"
                   onClick={() => setActiveSection("marketplace")}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent to-blue-400" />
-                  <div className="relative p-8 text-white">
+                  <img 
+                    src={cardMarketplace} 
+                    alt="Agricultural marketplace"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/90 to-blue-400/80 group-hover:from-accent/95 group-hover:to-blue-400/85 transition-all" />
+                  <div className="relative p-8 h-full flex flex-col justify-end text-white">
                     <div className="w-16 h-16 mb-4 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
                       <ShoppingBag className="h-8 w-8" />
                     </div>
@@ -74,11 +88,16 @@ const Index = () => {
                 </div>
                 
                 <div 
-                  className="relative rounded-2xl overflow-hidden cursor-pointer group shadow-medium hover:shadow-lg transition-all"
+                  className="relative rounded-2xl overflow-hidden cursor-pointer group shadow-medium hover:shadow-lg transition-all h-64"
                   onClick={() => setActiveSection("services")}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-secondary to-orange-400" />
-                  <div className="relative p-8 text-white">
+                  <img 
+                    src={cardServices} 
+                    alt="Agricultural services"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-secondary/90 to-orange-400/80 group-hover:from-secondary/95 group-hover:to-orange-400/85 transition-all" />
+                  <div className="relative p-8 h-full flex flex-col justify-end text-white">
                     <div className="w-16 h-16 mb-4 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
                       <Wrench className="h-8 w-8" />
                     </div>
@@ -88,11 +107,16 @@ const Index = () => {
                 </div>
                 
                 <div 
-                  className="relative rounded-2xl overflow-hidden cursor-pointer group shadow-medium hover:shadow-lg transition-all"
+                  className="relative rounded-2xl overflow-hidden cursor-pointer group shadow-medium hover:shadow-lg transition-all h-64"
                   onClick={() => setActiveSection("contact")}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-glow to-accent" />
-                  <div className="relative p-8 text-white">
+                  <img 
+                    src={cardContact} 
+                    alt="Connect with us"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-glow/90 to-accent/80 group-hover:from-primary-glow/95 group-hover:to-accent/85 transition-all" />
+                  <div className="relative p-8 h-full flex flex-col justify-end text-white">
                     <div className="w-16 h-16 mb-4 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
                       <MessageSquare className="h-8 w-8" />
                     </div>
